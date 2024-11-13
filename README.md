@@ -20,3 +20,40 @@ Ce projet vous permet de consulter les journaux système de Windows (Event Logs)
 ## Installation
 
 1. Clonez le repository ou téléchargez le projet sur votre machine.
+2. Ouvrez le projet dans Visual Studio ou un IDE compatible avec C#.
+3. Compilez le projet en mode Debug ou Release.
+4. Exécutez le programme dans Visual Studio.
+
+### Utilisation
+## Fonctionnalités de l'interface :
+
+## Liste des Journaux Système :
+
+La liste des journaux système est affichée dans un ListBox.
+Sélectionnez un journal pour afficher ses événements dans un tableau.
+
+## Filtrer les événements :
+
+Utilisez la ComboBox pour choisir un type d'événement (Information, Erreur, etc.).
+Cliquez sur Filtrer pour appliquer le filtre.
+
+## Supprimer des événements :
+
+Sélectionnez les événements dans le tableau et cliquez sur Supprimer pour les enlever.
+Cliquez sur Tout Supprimer pour supprimer toutes les entrées du tableau.
+
+## Exporter les logs :
+
+Cliquez sur Exporter pour sauvegarder les logs visibles dans un fichier CSV ou TXT.
+Sélectionnez le format (CSV ou TXT) et l'emplacement pour sauvegarder le fichier.
+
+Fonctionnement de l'export :
+
+Les logs exportés contiennent les colonnes suivantes :
+- Niveau
+- Date et Heure
+- Source
+- Catégorie
+- Message
+  
+Les fichiers CSV sont séparés par des points-virgules (;) et les dates sont formatées comme du texte pour une lecture correcte dans Excel.
