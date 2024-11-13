@@ -1,0 +1,10 @@
+C:\Users\natha\Documents\C#\Logs\Logs\Logs\bin\Debug\Logs.exe.config
+C:\Users\natha\Documents\C#\Logs\Logs\Logs\bin\Debug\Logs.exe
+C:\Users\natha\Documents\C#\Logs\Logs\Logs\bin\Debug\Logs.pdb
+C:\Users\natha\Documents\C#\Logs\Logs\Logs\obj\Debug\Logs.csproj.AssemblyReference.cache
+C:\Users\natha\Documents\C#\Logs\Logs\Logs\obj\Debug\Logs.Properties.Resources.resources
+C:\Users\natha\Documents\C#\Logs\Logs\Logs\obj\Debug\Logs.csproj.GenerateResource.cache
+C:\Users\natha\Documents\C#\Logs\Logs\Logs\obj\Debug\Logs.csproj.CoreCompileInputs.cache
+C:\Users\natha\Documents\C#\Logs\Logs\Logs\obj\Debug\Logs.exe
+C:\Users\natha\Documents\C#\Logs\Logs\Logs\obj\Debug\Logs.pdb
+C:\Users\natha\Documents\C#\Logs\Logs\Logs\obj\Debug\Logs.Logs.resources
