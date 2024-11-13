@@ -25,7 +25,6 @@ Ce projet vous permet de consulter les journaux système de Windows (Event Logs)
 4. Exécutez le programme dans Visual Studio.
 
 ### Utilisation
-## Fonctionnalités de l'interface :
 
 ## Liste des Journaux Système :
 
@@ -57,3 +56,24 @@ Les logs exportés contiennent les colonnes suivantes :
 - Message
   
 Les fichiers CSV sont séparés par des points-virgules (;) et les dates sont formatées comme du texte pour une lecture correcte dans Excel.
+
+## Exemple d'export CSV (en brut) :
+
+Niveau;Date et Heure;Source;Catégorie;Message
+"Information";"2024-11-14 08:45:00";"Application";"Général";"L'application a démarré."
+"Avertissement";"2024-11-14 09:10:00";"Système";"Disque";"Espace disque faible."
+"Erreur";"2024-11-14 09:30:00";"Application";"Erreur de connexion";"Impossible de se connecter 
+
+## Exemple d'export TXT :
+
+Niveau    Date et Heure      Source     Catégorie     Message
+Information  2024-11-14 08:45:00    Application   Général   L'application a démarré.
+Avertissement 2024-11-14 09:10:00    Système       Disque     Espace disque faible.
+Erreur  2024-11-14 09:30:00    Application   Erreur de connexion   Impossible de se connecter à la base de données.
+
+## Technologies utilisées
+- C# (.NET Framework) : Le programme est développé en C# avec le .NET Framework.
+- Windows Forms : Utilisation de Windows Forms pour l'interface graphique.
+
+## Auteurs
+Skrilak
