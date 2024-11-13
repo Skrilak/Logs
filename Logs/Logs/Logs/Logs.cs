@@ -47,12 +47,12 @@ namespace Logs
             buttonExporter.FlatStyle = FlatStyle.Flat;
             buttonExporter.Click += new EventHandler(buttonExporter_Click); // Attache l'événement pour le clic
 
-            // Initialiser ComboBox
+            // Initialiser ComboBox avec les types de filtres
             comboBoxFilterType.Items.AddRange(new string[] { "Information", "Warning", "Error", "SuccessAudit", "FailureAudit" });
-            comboBoxFilterType.SelectedIndex = 0; // Par défaut
+            comboBoxFilterType.SelectedIndex = 0; // Sélectionne "Information" par défaut
 
             // Charger les journaux et configurer DataGridView
-            MessageBox.Show("Chargement des journaux...");
+            MessageBox.Show("Chargement des journaux système en cours...", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
             LoadEventLogs();
             InitializeDataGridView();
         }
@@ -66,25 +66,25 @@ namespace Logs
                 {
                     try
                     {
-                        listBox1.Items.Add(log.Log); // Nom du journal
+                        listBox1.Items.Add(log.Log); // Ajoute le nom du journal à la liste
                     }
                     catch (System.Security.SecurityException)
                     {
-                        MessageBox.Show("Accès refusé pour le journal : " + log.LogDisplayName);
+                        MessageBox.Show("Accès refusé pour le journal : " + log.LogDisplayName, "Erreur d'accès", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
                     catch (Exception ex)
                     {
-                        MessageBox.Show("Erreur lors du chargement des journaux : " + ex.Message);
+                        MessageBox.Show("Erreur lors du chargement des journaux : " + ex.Message, "Erreur", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
                 }
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Erreur critique : " + ex.Message);
+                MessageBox.Show("Erreur critique lors du chargement des journaux : " + ex.Message, "Erreur critique", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
-        // Initialisation de l'affichage pour les logs
+        // Initialisation de l'affichage des logs dans DataGridView
         private void InitializeDataGridView()
         {
             dataGridView1.Columns.Clear();
@@ -96,7 +96,7 @@ namespace Logs
 
             dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
 
-            // Styles pour les colonnes et le texte
+            // Appliquer des styles aux colonnes et au texte
             dataGridView1.ColumnHeadersDefaultCellStyle.BackColor = Color.Navy;
             dataGridView1.ColumnHeadersDefaultCellStyle.ForeColor = Color.White;
             dataGridView1.ColumnHeadersDefaultCellStyle.Font = new Font("Tahoma", 10, FontStyle.Bold);
@@ -107,7 +107,7 @@ namespace Logs
             dataGridView1.DefaultCellStyle.SelectionForeColor = Color.White;
             dataGridView1.EnableHeadersVisualStyles = false;
 
-            MessageBox.Show("DataGridView configuré.");
+            MessageBox.Show("Configuration de DataGridView terminée.", "Configuration terminée", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
         private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
@@ -115,7 +115,7 @@ namespace Logs
             if (listBox1.SelectedItem != null)
             {
                 string selectedLog = listBox1.SelectedItem.ToString();
-                MessageBox.Show("Journal sélectionné : " + selectedLog);
+                MessageBox.Show("Journal sélectionné : " + selectedLog, "Sélection du journal", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 LoadEvents(selectedLog);
             }
         }
@@ -134,11 +134,11 @@ namespace Logs
                     eventEntries.Add(entry); // Ajouter chaque entrée à la liste temporaire
                     dataGridView1.Rows.Add(entry.EntryType, entry.TimeGenerated, entry.Source, entry.Category, entry.Message);
                 }
-                MessageBox.Show("Événements chargés : " + logName);
+                MessageBox.Show("Événements chargés depuis le journal : " + logName, "Chargement terminé", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Erreur lors du chargement des événements : " + ex.Message);
+                MessageBox.Show("Erreur lors du chargement des événements : " + ex.Message, "Erreur", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -147,7 +147,7 @@ namespace Logs
         {
             if (comboBoxFilterType.SelectedItem == null)
             {
-                MessageBox.Show("Sélectionnez un niveau de filtre.");
+                MessageBox.Show("Veuillez sélectionner un type de filtre.", "Erreur de filtre", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
 
@@ -161,28 +161,34 @@ namespace Logs
                     dataGridView1.Rows.Add(entry.EntryType, entry.TimeGenerated, entry.Source, entry.Category, entry.Message);
                 }
             }
-            MessageBox.Show("Filtrage terminé : " + filterType);
+            MessageBox.Show("Filtrage effectué sur le type : " + filterType, "Filtrage terminé", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
-        // Bouton supprimer logs selectionné
+        // Bouton supprimer logs sélectionnés
         private void buttonSuppr_Click(object sender, EventArgs e)
         {
             foreach (DataGridViewRow row in dataGridView1.SelectedRows)
             {
                 dataGridView1.Rows.Remove(row);
             }
+            MessageBox.Show("Les logs sélectionnés ont été supprimés.", "Suppression réussie", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
-        //Bouton supprimer tout les logs affichés
+        // Bouton supprimer tous les logs affichés
         private void buttonToutSuppr_Click(object sender, EventArgs e)
         {
             dataGridView1.Rows.Clear();
+            MessageBox.Show("Tous les logs affichés ont été supprimés.", "Suppression complète", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
         // Bouton quitter l'application
         private void buttonQuitter_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+            var result = MessageBox.Show("Êtes-vous sûr de vouloir quitter l'application ?", "Quitter", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (result == DialogResult.Yes)
+            {
+                Application.Exit();
+            }
         }
 
         // Bouton exporter en txt ou csv
@@ -231,7 +237,7 @@ namespace Logs
                             }
                         }
                     }
-                    MessageBox.Show("Logs exportés avec succès !");
+                    MessageBox.Show("Les logs ont été exportés avec succès.", "Exportation réussie", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
             }
         }

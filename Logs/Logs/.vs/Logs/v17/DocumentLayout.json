@@ -7,11 +7,11 @@
       "RelativeMoniker": "D:0:0:{DEDEAAAD-FF62-4CCC-B284-33A22F59A702}|Logs\\Logs.csproj|solutionrelative:logs\\logs.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{DEDEAAAD-FF62-4CCC-B284-33A22F59A702}|Logs\\Logs.csproj|c:\\users\\natha\\documents\\c#\\logs\\logs\\logs\\logs.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{DEDEAAAD-FF62-4CCC-B284-33A22F59A702}|Logs\\Logs.csproj|C:\\Users\\natha\\Documents\\C#\\Logs\\Logs\\logs\\logs.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{DEDEAAAD-FF62-4CCC-B284-33A22F59A702}|Logs\\Logs.csproj|solutionrelative:logs\\logs.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{DEDEAAAD-FF62-4CCC-B284-33A22F59A702}|Logs\\Logs.csproj|c:\\users\\natha\\documents\\c#\\logs\\logs\\logs\\logs.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{DEDEAAAD-FF62-4CCC-B284-33A22F59A702}|Logs\\Logs.csproj|C:\\Users\\natha\\Documents\\C#\\Logs\\Logs\\logs\\logs.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{DEDEAAAD-FF62-4CCC-B284-33A22F59A702}|Logs\\Logs.csproj|solutionrelative:logs\\logs.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
@@ -34,8 +34,7 @@
               "RelativeToolTip": "Logs\\Logs.Designer.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAWAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-12T17:52:53.013Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-12T17:52:53.013Z"
             },
             {
               "$type": "Document",
@@ -45,7 +44,7 @@
               "RelativeDocumentMoniker": "Logs\\Logs.cs",
               "ToolTip": "C:\\Users\\natha\\Documents\\C#\\Logs\\Logs\\Logs\\Logs.cs",
               "RelativeToolTip": "Logs\\Logs.cs",
-              "ViewState": "AgIAANcAAAAAAAAAAAAUwOsAAAANAAAAAAAAAA==",
+              "ViewState": "AgIAAN0AAAAAAAAAAAAkwPUAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-12T17:51:21.66Z",
               "EditorCaption": ""
@@ -59,8 +58,7 @@
               "ToolTip": "C:\\Users\\natha\\Documents\\C#\\Logs\\Logs\\Logs\\Logs.cs [Design]",
               "RelativeToolTip": "Logs\\Logs.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-12T17:51:01.417Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2024-11-12T17:51:01.417Z"
             }
           ]
         }
